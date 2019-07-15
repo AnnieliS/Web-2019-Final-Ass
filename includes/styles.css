@@ -1,0 +1,634 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-color: #232323;
+    overflow-x: hidden;
+}
+
+main, nav, article, aside, section, header, footer {
+    display: block;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    width: 86.11111111111111%;
+    margin-left: 6.944444444444445%;
+    margin-right: 6.944444444444445%;
+    height: 100%;
+}
+
+#wrapper {
+    margin: 0px auto;
+    min-height: 100%;
+}
+
+@media only screen and (min-width:1000px) {
+    /*-----HEADER-----*/
+    #fixedHead header {
+        position: fixed;
+        width: 100vw;
+    }
+    #fixedHead {
+        position: fixed;
+        z-index: 3;
+        height: 140px;
+        width: 100vw;
+        background-color: #000000;
+    }
+    #fixedHead .navbar {
+        position: fixed;
+        z-index: 12;
+    }
+    #fixedHead .container {
+        margin-top: 4vh;
+        margin-right: 2vw;
+    }
+    #fixedHead #logo {
+        background-image: url("../images/site_logo.png");
+        height: 100px;
+        width: 190px;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        float: left;
+    }
+    /*-----NAV-----*/
+    #fixedHead nav {
+        width: 100vw;
+        position: absolute;
+        top: 140px;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+        justify-content: center;
+    }
+    #fixedHead nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    /*-----MAIN-----*/
+    main {
+        padding-bottom: 40px;
+        position: relative;
+        top: 25vh;
+    }
+    #textbox {
+        width: 100%;
+        border-radius: 5px;
+    }
+    #pageH1 {
+        font-size: 32px;
+        color: #d6d6d6;
+        position: relative;
+    }
+
+    /*-----Index Page-----*/
+    #siteSlogan {
+        background-image: url("../images/Slogan.png");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-color: #000;
+        position: relative;
+        top: 15vh;
+        height: 480px;
+        width: 100%;
+        display: block;
+        float: left;
+    }
+    h2 {
+        font-family: 'Alef', sans-serif;
+        color: #d6d6d6;
+        font-size: 22px;
+        margin-left: 165px;
+        margin-bottom: 50px;
+    }
+    .popType {
+        position: relative;
+        left: 100px;
+        top: 20px;
+    }
+    .popType a {
+        margin-left: 4vw;
+    }
+    .popObj {
+        position: relative;
+        left: 100px;
+        top: 40px;
+    }
+    .popObj a {
+        margin-left: 4vw;
+    }
+    /*-----VIRUS PAGE-----*/
+    #VirusPage #wrapper {
+        width: 750px;
+    }
+    #VirusPage #virusPic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #VirusPage #virusPic button {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+    }
+    #VirusPage #virusPic img {
+        height: 200px;
+        width: 200px;
+    }
+    .virImg {
+        height: 200px;
+        width: 200px;
+    }
+    #VirusPage #virusPic h3 {
+        font-size: 26px;
+        color: #d6d6d6;
+        font-family: 'Alef', sans-serif;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    #VirusPage #virusPic h6 {
+        font-size: 14px;
+        color: #fff;
+        font-family: 'Alef', sans-serif;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    #VirusPage .ratingStars {
+        display: flex;
+        color: #ffee58;
+        margin-bottom: 40px;
+    }
+    #VirusPage .content {
+        max-width: 500px;
+        padding: 30px;
+    }
+    #VirusPage iframe {
+        width: 80%;
+        height: 250px;
+    }
+    #VirusPage .submit_buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .lightFlex {
+        display: flex;
+        justify-content: center;
+    }
+    .right {
+        margin-left: 40px;
+    }
+    /*Show More Button*/
+    #showMore {
+        height: 40px;
+        width: 200px;
+        background-color: #d6d6d6;
+        position: absolute;
+        margin: 20px auto;
+        text-align: center;
+    }
+    /*-----BUY NOW PAGE-----*/
+    #buynow #wrapper {
+        width: 85vw;
+    }
+    #buynow .submit_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    #buynow .submit_buttons button {
+        margin: 1vw;
+    }
+    #buynow2 .submit_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    #buynow2 .submit_buttons button {
+        flex-basis: 33%;
+    }
+    .con {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: #4d4d4d;
+        padding: 20px;
+        min-height: 50vh;
+    }
+    #feedback .con {
+        justify-content: center;
+        align-items: center;
+    }
+    .col-auto {
+        padding: 0;
+    }
+    #victim_info p {
+        font-weight: bold;
+    }
+    .con h1 {
+        justify-content: center;
+        align-items: center;
+    }
+    .con button {
+        justify-content: center;
+        align-items: center;
+    }
+    .col-sm-10 {
+        width: 75%;
+    }
+    /*-----ADMIN PAGE-----*/
+    #sideNavi .nav-pills {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        position: fixed;
+    }
+    #sideNavi .tab-content {
+        margin-top: 5%;
+    }
+    .nav-pills .nav-link.active {
+        background-color: #6c757d !important;
+    }
+    #sideNavi a {
+        color: #fff !important;
+    }
+    /*Dashboard*/
+    .box {
+        width: 40vw;
+        height: 10vh;
+        margin-bottom: 10%;
+        border-radius: 49px;
+        background-color: #eee;
+    }
+    .box i {
+        float: left;
+        margin-left: 7%;
+        margin-top: 2%;
+        color: #606060;
+    }
+    .box h2 {
+        float: left;
+        margin-left: 5%;
+        margin-top: 4%;
+        color: #000;
+    }
+    /*Video Responsivity*/
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /*Messeges*/
+    #Message i {
+        float: left;
+    }
+    /* Style the container with a rounded border, grey background and some padding and margin */
+    #Message .container {
+        border: 2px solid #ccc;
+        background-color: #eee;
+        border-radius: 5px;
+        padding: 16px;
+        margin: 16px 0;
+    }
+    /* Clear floats after containers */
+    #Message .container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+    #Message .container img {
+        float: left;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+    /* Increase the font-size of a span element */
+    #Message .container span {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+    /*-----FOOTER-----*/
+    footer {
+        height: 40px;
+        width: 100vw;
+        position: relative;
+        background-color: #cfd8dc;
+        text-align: center;
+        bottom: 0px;
+        margin: 0px auto;
+    }
+    .clear {
+        clear: both;
+    }
+}
+
+/*-----Virus Upload-----*/
+
+/*Font Colours*/
+
+#uploadVir{
+    margin: 0px auto;
+}
+
+#uploadVir label{
+    color: #fff;
+}
+
+
+
+/*Dragon Drop*/
+
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+
+.files input:focus {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    border: 1px solid #92b0b3;
+}
+
+.files {
+    position: relative
+}
+
+.files:after {
+    pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.color input {
+    background-color: #f1f1f1;
+}
+
+.files:before {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " or drag it here. ";
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/*Packs Box Size*/
+
+#uploadVir .packTitle {
+    height: 15vh;
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 4vh;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 300%;
+}
+
+#uploadVir .packDesc {
+    height: 75vh;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 20px;
+    font-size: 75%;
+}
+
+#uploadVir .packDesc p{
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+/*Containers Margin & Box Positions*/
+
+#uploadVir .container {
+    min-height: 70vh;
+    margin-bottom: 4%;
+}
+
+.progress{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#uploadVir #stepone-done{
+    float: right;
+    position: relative;
+    left: 70vw;
+}
+#uploadVir button{
+    float: right;
+    position: relative;
+    left: 70vw;
+}
+
+#uploadVir .stepone{
+    padding-top: 8%;
+}
+
+#uploadVir .center-radio{
+    margin-left: 48%;
+}
+
+#uploadVir .range{
+    margin-top: 15vh;
+}
+
+.hide{
+    display: none;
+}
+
+#stepTwo{
+    margin-top: 12vh;
+}
+
+/*-----MOBILE-----*/
+
+@media screen and (max-width: 999px) {
+    #siteSlogan {
+        display: none;
+    }
+    #pageH1 {
+        font-size: 32px;
+        color: #d6d6d6;
+        position: relative;
+    }
+    #logo {
+        background-image: url('../images/Mobile_Header.png');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 202px;
+        background-color: #000;
+    }
+    .popObj {
+        left: 0px;
+    }
+    .popType {
+        left: 0px;
+    }
+    .popContain {
+        padding-top: 20vh;
+    }
+    footer {
+        display: none;
+    }
+    #VirusPage #virusPic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #VirusPage #virusPic button {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+    }
+    #VirusPage #virusPic img {
+        height: 200px;
+        width: 200px;
+    }
+    .virImg {
+        height: 200px;
+        width: 200px;
+    }
+    #VirusPage #virusPic h3 {
+        font-size: 26px;
+        color: #d6d6d6;
+        font-family: 'Alef', sans-serif;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    #VirusPage #virusPic h6 {
+        font-size: 14px;
+        color: #fff;
+        font-family: 'Alef', sans-serif;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    #VirusPage .ratingStars {
+        display: flex;
+        color: #ffee58;
+        margin-bottom: 40px;
+    }
+    #VirusPage .content {
+        max-width: 500px;
+        padding: 30px;
+    }
+    #VirusPage iframe {
+        width: 80%;
+        height: 250px;
+    }
+    #VirusPage .submit_buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .lightFlex {
+        display: flex;
+        justify-content: center;
+    }
+    .right {
+        margin-left: 40px;
+    }
+    /*Show More Button*/
+    #showMore {
+        height: 40px;
+        width: 200px;
+        background-color: #d6d6d6;
+        position: absolute;
+        margin: 20px auto;
+        text-align: center;
+    }
+    /*-----FORM-----*/
+    #buynow #wrapper {
+        width: 85vw;
+    }
+    #textbox {
+        width: 100%;
+        border-radius: 5px;
+    }
+    #buynow .submit_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    #buynow .submit_buttons button {
+        margin: 1vw;
+    }
+    #buynow2 .submit_buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #buynow2 .submit_buttons button {
+        flex-basis: 33%;
+    }
+    .con {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: #4d4d4d;
+        padding: 20px;
+        min-height: 50vh;
+    }
+    #feedback .con {
+        justify-content: center;
+        align-items: center;
+    }
+    .col-auto {
+        padding: 0;
+    }
+    #victim_info p {
+        font-weight: bold;
+    }
+    .con h1 {
+        justify-content: center;
+        align-items: center;
+    }
+    .con button {
+        justify-content: center;
+        align-items: center;
+    }
+    .col-sm-10 {
+        width: 75%;
+    }
+    #Message .container {
+        text-align: center;
+    }
+    #Message .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
