@@ -26,7 +26,7 @@ var clickBox = document.getElementById('showMore');
             virUploader.className = "virUploader";
 
             var virPrice = document.createElement('h3');
-            virPrice.innerHTML = obj[i].vir_price;
+            virPrice.innerHTML = obj[i].vir_price + "$";
             virPrice.className = "virPrice";
 
             var virStars = document.createElement('div');
@@ -34,9 +34,7 @@ var clickBox = document.getElementById('showMore');
 
             var temp = obj[i].vir_star_rate
 
-            virus.appendChild(virImg);
-            virus.appendChild(virTitle);
-            virus.appendChild(virUploader);
+
 
             for(var j = 0;j<temp;j++){
                 var star = document.createElement('i');
@@ -45,8 +43,10 @@ var clickBox = document.getElementById('showMore');
 
             }
 
+            virus.appendChild(virImg);
+            virus.appendChild(virTitle);
+            virus.appendChild(virUploader);
             virus.appendChild(virStars);
-           
             virus.appendChild(virPrice);
 
             mainArea.appendChild(virus);
@@ -88,7 +88,7 @@ generateVirus = function () {
             virUploader.className = "virUploader";
 
             var virPrice = document.createElement('h3');
-            virPrice.innerHTML = obj[i].vir_price;
+            virPrice.innerHTML = obj[i].vir_price + "$";
             virPrice.className = "virPrice";
 
             var temp = obj[i].vir_star_rate
@@ -96,9 +96,7 @@ generateVirus = function () {
             var virStars = document.createElement('div');
             virStars.className = "ratingStars";
 
-            virus.appendChild(virImg);
-            virus.appendChild(virTitle);
-            virus.appendChild(virUploader);
+
 
             for(var j = 0;j<temp;j++){
                 var star = document.createElement('i');
@@ -107,8 +105,11 @@ generateVirus = function () {
 
             }
 
+            
+            virus.appendChild(virImg);
+            virus.appendChild(virTitle);
+            virus.appendChild(virUploader);
             virus.appendChild(virStars);
-           
             virus.appendChild(virPrice);
 
             mainArea.appendChild(virus);
@@ -146,7 +147,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
         virUploader.className = "virUploader";
 
         var virPrice = document.createElement('h3');
-        virPrice.innerHTML = obj[0].vir_price;
+        virPrice.innerHTML = obj[0].vir_price + "$";
         virPrice.className = "virPrice";
 
         var virStars = document.createElement('div');
