@@ -240,6 +240,11 @@ main {
         width: 75%;
     }
     /*-----ADMIN PAGE-----*/
+    #uTable{
+        color: #fff;
+    }
+
+
     #sideNavi .nav-pills {
         position: absolute;
         top: 30%;
@@ -344,6 +349,8 @@ main {
 #uploadVir label{
     color: #fff;
 }
+
+
 
 
 
@@ -474,6 +481,14 @@ main {
 #stepTwo{
     margin-top: 12vh;
 }
+
+
+/*-----My Page-----*/
+
+#myPage tbody{
+    color: #fff;
+}
+
 
 /*-----MOBILE-----*/
 

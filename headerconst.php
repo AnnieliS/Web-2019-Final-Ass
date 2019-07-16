@@ -1,3 +1,10 @@
+<?php
+session_start();
+include 'DB.php';
+include 'URLset.php';
+
+?>
+
 <div id="fixedHead">
 
     <header>
@@ -57,19 +64,19 @@
                 </li>
 
 
-    <!-- REMEMBER TO SWITCH BACK!!!! -->
+                <!-- REMEMBER TO SWITCH BACK!!!! -->
 
                 <li class="nav-item">
                     <a class="nav-link" href="admin.php">My Page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Help</a>
+                    <a class="nav-link" href="g_myPage.php">Help</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
             </ul>
         </div>

@@ -6,7 +6,7 @@
    
     if(!empty($_POST["loginMail"]||$_POST["loginPass"]))
     {
-       $query = "SELECT * FROM tb_users_205 WHERE email='"
+       $query = "SELECT * FROM tb_users_205 WHERE username='"
        . $_POST["loginMail"]
        ."' and password ='"
        . $_POST["loginPass"]
@@ -56,8 +56,6 @@
 
 
         <!--Slogan-->
-
-        <div id="siteSlogan"></div>
         <main>
 
             <!--Content-->
@@ -65,7 +63,7 @@
            <form action="#" method="post" id="frm">
                <div class="form-group">
                    <label for="loginMail">Email: </label>
-                   <input type="email" class="form-control" name="loginMail" id="loginMail"
+                   <input type="text" class="form-control" name="loginMail" id="loginMail"
                         aria-describedby="emailHelp" placeholder="Enter email">
                </div>
                <div class="form-group">
