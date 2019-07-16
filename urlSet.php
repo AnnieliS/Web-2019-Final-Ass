@@ -1,5 +1,5 @@
 <?php
 
-define("URL", "http://localhost/~annielisiegel/IntroToWeb/exercises/Final%20Ass/");
+define("URL", "http://localhost/~oreitan/Web-2019-Final-Ass/");
 
 ?>
