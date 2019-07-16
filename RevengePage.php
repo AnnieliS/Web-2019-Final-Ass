@@ -55,7 +55,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a class="btn btn-secondary" href="Checkout.html">Buy Now</a>
+                            <a class="btn btn-secondary" href="Checkout.php">Buy Now</a>
                         </div>
                     </div>
                 </div>
