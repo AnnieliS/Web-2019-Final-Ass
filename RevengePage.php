@@ -1,5 +1,9 @@
 <?php
 session_start();
+$_SESSION["name"] = null;
+$_SESSION["email"] = null;
+$_SESSION["info"] = null;
+$_SESSION["dis"] = null;
 ?>
 
 

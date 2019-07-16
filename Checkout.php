@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -22,12 +25,14 @@
     <!-- Main -->
 
     <div id="wrapper">
-
+    
+    <?php
+        if ($_SESSION["dis"] == "on")
+            $ck = "checked";
+        else $ck = "unchecked";
+    ?>
 
     <!-- Breadcrumbs -->
-
-
-
         <main>
             <h1 id="pageH1">Victims info</h1>
             <div class="con">
@@ -35,24 +40,24 @@
                     <div class="form-group row">
                         <label for="inputfullname" class="col-sm-2 col-form-label">Full name</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputfullname" name="fullname" placeholder="Full name" required>
+                            <input type="text" class="form-control" id="inputfullname" name="fullname" placeholder="Full name" value= '<? echo $_SESSION["name"]?>' required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-7">
-                            <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email" required>
+                            <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email" value= '<?php echo $_SESSION["email"]?>' required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="textbox" class="col-sm-2 col-form-label">More Info</label>
                         <div class="col-sm-7">
-                            <textarea name="info" rows="5" id="textbox" form="victim_info" placeholder="Any info you want to use against the victim"></textarea>
+                            <textarea name="info" rows="5" id="textbox" form="victim_info" placeholder="Any info you want to use against the victim"><?php echo $_SESSION["info"] ?></textarea>
                         </div>
                     </div>
                     <div class='col-auto my-1'>
                         <div class='custom-control custom-checkbox mr-sm-1'>
-                            <input type='checkbox' class='custom-control-input' name="dis" id='customControlAutosizing' value="on">
+                            <input type='checkbox' class='custom-control-input' name="dis" id='customControlAutosizing' <?php echo $ck ?> >
                             <label class='custom-control-label' for='customControlAutosizing'>Download and Send yourself <p>10% Discount</p></label>
                         </div>
                     </div>
