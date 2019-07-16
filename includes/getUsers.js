@@ -31,6 +31,7 @@ $(window).on("load", function () {
             uEmail.innerHTML = obj[i].email;
 
             $(uA).attr({ "href": 'http://localhost/~annielisiegel/Final%20Ass%202.0/Web-2019-Final-Ass/adMyPage.php?userID=' + uId.innerHTML});
+            $(uA).attr({ "href": 'http://shenkar.html5-book.co.il/2018-2019/web1/dev_205/adMyPage.php?userID=' + uId.innerHTML});
 
             uName.appendChild(uA);
             uRow.appendChild(uId);

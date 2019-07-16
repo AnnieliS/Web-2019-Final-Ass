@@ -1,14 +1,21 @@
 $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget)
+    $('#virusUserSingle').html('');
+    $('#virusUserSingle2').html('');
     var virusId = button.data('whatever')
     var Title = $('VirTitle');
     var insideLightbox = document.getElementById('virusUserSingle');
-    $.getJSON('./data/virus.json', function (data) {
+    var insideLightbox2 = document.getElementById('virusUserSingle2');
 
+    insideLightbox2.classList.add('hide');
+    insideLightbox.classList.remove('hide');
+    
+    $.getJSON("./data/virus.JSON", function (data) {
+        
+       
         $.each(data.virus, function (i, obj) {
             if (obj.vId == virusId) {
 
-                console.log("4");
 
                 //Infection Row
 
@@ -117,7 +124,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     $.each(data.virus, function (i, obj) {
                         var vInfLI = document.createElement('li');
-                        vInfLI.innerHTML = obj.vInfMore[i] + " ITERATION : " +i;
+                        vInfLI.innerHTML = obj.vInfMore[i];
 
                         vInfUL.appendChild(vInfLI);
 
@@ -125,7 +132,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     vInfMore.appendChild(vInfUL);
 
-                    insideLightbox.appendChild(vInfMore);
+                    insideLightbox2.appendChild(vInfMore);
+                    insideLightbox2.classList.remove('hide');
+                    insideLightbox.classList.add('hide');
                 }
 
                 //Life Span
@@ -138,7 +147,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     $.each(data.virus, function (j, obj) {
                         var vLifeLI = document.createElement('li');
-                        vLifeLI.innerHTML = obj.vLifeMore[j] + " ITERATION : " +j;
+                        vLifeLI.innerHTML = obj.vLifeMore[j];
 
                         vLifeUL.appendChild(vLifeLI);
 
@@ -146,7 +155,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     vLifeMore.appendChild(vLifeUL);
 
-                    insideLightbox.appendChild(vLifeMore);
+                    insideLightbox2.appendChild(vLifeMore);
+                    insideLightbox2.classList.remove('hide');
+                    insideLightbox.classList.add('hide');
                 }
 
                 //Immunity
@@ -159,7 +170,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     $.each(data.virus, function (i, obj) {
                         var vImmuLI = document.createElement('li');
-                        vImmuLI.innerHTML = obj.vImmuMore[i] + " ITERATION : " +i;
+                        vImmuLI.innerHTML = obj.vImmuMore[i];
 
                         vImmuUL.appendChild(vImmuLI);
 
@@ -167,7 +178,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     vImmuMore.appendChild(vImmuUL);
 
-                    insideLightbox.appendChild(vImmuMore);
+                    insideLightbox2.appendChild(vImmuMore);
+                    insideLightbox2.classList.remove('hide');
+                    insideLightbox.classList.add('hide');
                 }
 
 
@@ -189,7 +202,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
                     vHackerMore.appendChild(vHackerUL);
 
-                    insideLightbox.appendChild(vHackerMore);
+                    insideLightbox2.appendChild(vHackerMore);
+                    insideLightbox2.classList.remove('hide');
+                    insideLightbox.classList.add('hide');
                 }
 
 
@@ -197,7 +212,6 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
             }
         })
-
 
     })
     var modal = $(this)

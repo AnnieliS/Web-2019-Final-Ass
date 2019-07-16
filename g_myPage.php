@@ -80,6 +80,7 @@ include 'URLset.php';
                     </div>
                     <div class="modal-body">
                         <div id="virusUserSingle" class="container"></div>
+                        <div id="virusUserSingle2" class="container"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
