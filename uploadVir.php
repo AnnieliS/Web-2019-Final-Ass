@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 //Recieving User Data
 if (isset($_GET["submitButt"])) {
 
@@ -8,16 +11,17 @@ if (isset($_GET["submitButt"])) {
   $virType = $_GET["virType"];
   $virPurp = $_GET["virPurp"];
   $virPack = $_GET["virPack"];
+  $virUploader = $_SESSION["user_id"];
 
   include 'DB.php';
   include 'urlSet.php';
 
   // Attempt insert query execution
-  $sql = "INSERT INTO tb_virus_205 (vir_name, vir_price, vir_desc,	vir_type,	vir_act_type,vir_pack_id) VALUES ('$virName', $virPrice, '$virDesc', '$virType', '$virPurp', $virPack)";
+  $sql = "INSERT INTO tb_virus_205 (vir_name, uploader_id, vir_price, vir_desc,	vir_type,	vir_act_type,vir_pack_id) VALUES ('$virName','$virUploader' , $virPrice, '$virDesc', '$virType', '$virPurp', $virPack)";
   if (mysqli_query($connection, $sql)) {
       // Close connection and move to MyPage
     mysqli_close($connection);
-    header('Location: ' . URL .'myPage.php');
+    header('Location: ' . URL .'g_myPage.php');
     exit();
   } else {
 
