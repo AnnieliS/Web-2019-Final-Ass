@@ -74,7 +74,7 @@ session_start();
                 <?php
                     if($_SESSION["user_id"]){
                          echo '               <li class="nav-item">
-                         <a class="nav-link" href="admin.php">My Page</a>
+                         <a class="nav-link" href="g_myPage.php">My Page</a>
                      </li>';
                     }
                 ?>
