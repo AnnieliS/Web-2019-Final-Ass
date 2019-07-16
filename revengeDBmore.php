@@ -8,8 +8,15 @@ $offset4 = $offset+4;
 $query = "SELECT * FROM `tb_virus_205` JOIN `tb_users_205` ON tb_users_205.user_id = tb_virus_205.uploader_id WHERE vir_id >" . $offset . " AND vir_id<" . $offset4 . "";
 
 $result = mysqli_query($connection, $query);
-$result = mysqli_fetch_all($result,MYSQLI_ASSOC);
-$result = json_encode($result);
+if (!$result) {
+    echo "NULL";
+} else {
+    $resArray = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $resArray[] = $row;
+    }
+    $rows = json_encode($resArray);
+    echo $rows;
+}
 mysqli_close($connection);
-echo $result;
 ?>

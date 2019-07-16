@@ -24,6 +24,11 @@ main {
     min-height: 100%;
 }
 
+#login h1, #login label{
+    color: #fff;
+
+}
+
 @media only screen and (min-width:1000px) {
     /*-----HEADER-----*/
     #fixedHead header {
@@ -43,7 +48,7 @@ main {
     }
     #fixedHead .container {
         margin-top: 4vh;
-        margin-right: 2vw;
+        margin-left:190px;
     }
     #fixedHead #logo {
         background-image: url("../images/site_logo.png");
@@ -200,6 +205,10 @@ main {
     #buynow .submit_buttons button {
         margin: 1vw;
     }
+    #buynow2 #wrapper{
+        width: 85vw;
+    }
+
     #buynow2 .submit_buttons {
         display: flex;
         justify-content: space-between;
@@ -207,6 +216,17 @@ main {
     #buynow2 .submit_buttons button {
         flex-basis: 33%;
     }
+
+    #disabledtextbox{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+
+    #buynow .con{
+        margin-right: 15vw;
+    }
+
     .con {
         display: flex;
         flex-direction: column;
@@ -344,6 +364,12 @@ main {
     }
     .clear {
         clear: both;
+    }
+
+    .toTheRight{
+        float:right;
+        position: relative;
+        left: 58vw;
     }
 }
 
@@ -511,6 +537,7 @@ main {
     height: 100%;
     width: 100%;
 }
+
 
 /*-----MOBILE-----*/
 

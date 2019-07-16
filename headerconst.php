@@ -2,7 +2,6 @@
 session_start();
 
 include 'DB.php';
-include 'URLset.php';
 
 
 ?>
@@ -54,7 +53,7 @@ include 'URLset.php';
             <ul class="navbar-nav mr-auto">
 
                 <!-- Guest options -->
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
@@ -64,7 +63,7 @@ include 'URLset.php';
                 <!-- Check SESSION for user login -->
 
                 <?php
-                if ($_SESSION["user_id"] || $_SESSION["is_admin"]==1) {
+                if ($_SESSION["user_id"] || ($_SESSION["is_admin"] == 1)) {
                     echo '                <li class="nav-item">
                          <a class="nav-link" href="uploadVir.php">Upload</a>
                      </li>
@@ -94,25 +93,26 @@ include 'URLset.php';
                 </li>
 
                 <!-- Check if User is logged in -->
+
+                <?php
+                if ($_SESSION["user_name"] || ($_SESSION["is_admin"] == 1)) {
+                    echo '                <li class="nav-item">
+                        <a class="nav-link active toTheRight" href="g_myPage.php">' . $_SESSION["user_name"] . '</a>
+                    </li>';
+                }
+                ?>
+
                 <li class="nav-item">
                     <?php
-                    if ($_SESSION["user_id"] || $_SESSION["is_admin"]==1) {
-                        echo '<a class="nav-link" href="logout.php">Logout</a>';
+                    if ($_SESSION["user_id"] || ($_SESSION["is_admin"] == 1)) {
+                        echo '<a class="nav-link toTheRight" href="logout.php">Logout</a>';
                     } else {
-                        echo '<a class="nav-link" href="login.php">Login</a>';
+                        echo '<a class="nav-link toTheRight" href="login.php">Login</a>';
                     }
 
                     ?>
 
                 </li>
-                <?php
-                    if($_SESSION["user_name"])
-                    {
-                        echo '                <li class="nav-item">
-                        <a class="nav-link active" href="admin.php">'.$_SESSION["user_name"].'</a>
-                    </li>';
-                    }
-                ?>
             </ul>
         </div>
     </nav>

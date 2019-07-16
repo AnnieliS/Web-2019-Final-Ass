@@ -3,8 +3,8 @@
     session_start();
     include 'DB.php';
     include 'URLset.php';
-   
-    if(!empty($_POST["loginMail"]||$_POST["loginPass"]))
+
+    if (!empty($_POST["loginMail"]) || !empty($_POST["loginPass"]))
     {
        $query = "SELECT * FROM tb_users_205 WHERE username='"
        . $_POST["loginMail"]
@@ -57,22 +57,22 @@
 
 
         <!--Slogan-->
-        <main>
+        <main id="login">
 
             <!--Content-->
             <div class="container"> <h1>Login</h1>
            <form action="#" method="post" id="frm">
                <div class="form-group">
-                   <label for="loginMail">Email: </label>
+                   <label for="loginMail">Username </label>
                    <input type="text" class="form-control" name="loginMail" id="loginMail"
-                        aria-describedby="emailHelp" placeholder="Enter email">
+                        aria-describedby="emailHelp" placeholder="Enter username">
                </div>
                <div class="form-group">
-                   <label for="exampleInputPassword1">Password: </label>
+                   <label for="exampleInputPassword1">Password </label>
                    <input type="password" class="form-control" name="loginPass" id="loginPass"
                             placeholder="Enter Password">
                </div>
-               <button type="submit" class="btn btn-primary">Log Me In</button>
+               <button type="submit" class="btn btn-secondary">Log Me In</button>
                <div class="error-message">
                    <?php 
                    if(isset($message)) 

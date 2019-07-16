@@ -14,7 +14,7 @@ if (isset($_GET["submitButt"])) {
   $virUploader = $_SESSION["user_id"];
 
   include 'DB.php';
-  include 'urlSet.php';
+  include 'URLset.php';
 
   // Attempt insert query execution
   $sql = "INSERT INTO tb_virus_205 (vir_name, uploader_id, vir_price, vir_desc,	vir_type,	vir_act_type,vir_pack_id) VALUES ('$virName','$virUploader' , $virPrice, '$virDesc', '$virType', '$virPurp', $virPack)";

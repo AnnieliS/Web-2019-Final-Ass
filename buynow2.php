@@ -25,7 +25,7 @@ session_start();
     <!-- Main -->
 
     <div class="clear"></div>
-    <main>
+    <main id="wrapper">
         <!-- Breadcrumbs -->
 
         <!-- Main info -->
@@ -62,7 +62,7 @@ session_start();
                 <div class='form-group row'>
                         <label for='textbox' class='col-sm-2 col-form-label'>More Info</label>
                         <div class='col-sm-7'>
-
+                        <textarea rows='5' name='info' id='disabledtextbox' form='victim_info' placeholder='Any info you want to use against the victim'>" . $_SESSION["info"] . "</textarea>    
                         </div>
                     </div>
                     <div class='col-auto my-1'>
