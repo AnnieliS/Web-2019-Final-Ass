@@ -240,6 +240,10 @@ main {
         width: 75%;
     }
     /*-----ADMIN PAGE-----*/
+    #uTable, #vadTable{
+        color: #fff;
+    }
+
     #sideNavi .nav-pills {
         position: absolute;
         top: 30%;
@@ -318,6 +322,24 @@ main {
         font-size: 20px;
         margin-right: 15px;
     }
+
+    /*Delete User Button*/
+    #delUserButt{
+        display: block;
+        height: 50px;
+        width: 400px;
+        border-radius: 12px;
+        background-color: #aa0606;
+        text-align: center;
+        text-shadow: 2px 2px #ff0000;
+        font-size: 200%;
+
+    }
+
+    #delUserButt{
+        cursor: pointer;
+    }
+
     /*-----FOOTER-----*/
     footer {
         height: 40px;
@@ -344,6 +366,8 @@ main {
 #uploadVir label{
     color: #fff;
 }
+
+
 
 
 
@@ -474,6 +498,14 @@ main {
 #stepTwo{
     margin-top: 12vh;
 }
+
+
+/*-----My Page-----*/
+
+#myPage tbody{
+    color: #fff;
+}
+
 
 /*-----MOBILE-----*/
 

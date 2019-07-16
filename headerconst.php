@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+include 'DB.php';
+include 'URLset.php';
+
+
 ?>
 
 <div id="fixedHead">
@@ -69,8 +74,6 @@ session_start();
                     }
                 ?>
 
-
-    <!-- REMEMBER TO SWITCH BACK!!!! -->
                 <?php
                     if($_SESSION["user_id"]){
                          echo '               <li class="nav-item">
@@ -79,7 +82,7 @@ session_start();
                     }
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Help</a>
+                    <a class="nav-link" href="g_myPage.php">Help</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Cart</a>
@@ -93,6 +96,7 @@ session_start();
                     }
                 ?>
                 <li class="nav-item">
+
                     <?php
                     if($_SESSION["user_id"]){
                         echo '<a class="nav-link" href="logout.php">Logout</a>';
@@ -101,7 +105,10 @@ session_start();
                         echo '<a class="nav-link" href="login.php">Login</a>';
                     }
                     ?>
-                    
+
+
+                    <a class="nav-link" href="login.php">Login</a>
+
                 </li>
             </ul>
         </div>

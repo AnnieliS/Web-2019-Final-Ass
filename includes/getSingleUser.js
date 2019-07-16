@@ -1,19 +1,27 @@
-var vTable = document.getElementById('vTable');
-var clickhome = $('#myPage');
-//clickhome.ready(getVirus);
-//clickhome.attr('ready', 'getVirus()');
+var currUserID;
+
+function getuserID() {
+    var aKeyValue = window.location.search.substring(1).split('?');
+    currUserid = aKeyValue[0].split("=")[1];
+    return currUserid;
+
+};
+
+var vTable = document.getElementById('vadTable');
+var clickhome = $('#myAdPage');
 var count = 0;
 var firstDone = false;
 
 
-//var getVirus = function () {
-    $( window ).on( "load", function() {
+
+$(window).on("load", function () {
     if (firstDone === true)
         return;
 
-        console.log("7");
+    currUserid = getuserID();
 
-    $.post('./g_virusList.php', function (data) {
+    $.post('./g_adVirusList.php', { userID: currUserid }, function (data) {
+
 
         var obj = JSON.parse(data);
 
@@ -34,12 +42,12 @@ var firstDone = false;
             var vName = document.createElement('td');
             vName.innerHTML = obj[i].vir_name;
 
-            var vPrice = document.createElement('td');
-            vPrice.innerHTML = obj[i].vir_price;
+            var vdesc = document.createElement('td');
+            vdesc.innerHTML = obj[i].vir_desc;
 
             vRow.appendChild(num);
             vRow.appendChild(vName);
-            vRow.appendChild(vPrice);
+            vRow.appendChild(vdesc);
 
             vTable.appendChild(vRow);
 
@@ -50,3 +58,14 @@ var firstDone = false;
 
     });
 });
+
+
+var deletefunc = function () {
+    currUserid = getuserID();
+    $.post('./deleteUser.php', { userID: currUserid }, function (data) {
+        window.location.replace('./admin.php');
+    });
+};
+
+$("#delUserButt").attr('onclick','deletefunc()');
+
