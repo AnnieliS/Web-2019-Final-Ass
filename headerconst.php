@@ -53,19 +53,31 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="RevengePage.php">Browse</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="uploadVir.php">Upload</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sell</a>
-                </li>
+                <?php
+                    if($_SESSION["user_id"]){
+                         echo '                <li class="nav-item">
+                         <a class="nav-link" href="uploadVir.php">Upload</a>
+                     </li>';
+                    }
+                ?>
+
+                <?php
+                    if($_SESSION["user_id"]){
+                         echo '                <li class="nav-item">
+                         <a class="nav-link" href="#">Sell</a>
+                     </li>';
+                    }
+                ?>
 
 
     <!-- REMEMBER TO SWITCH BACK!!!! -->
-
-                <li class="nav-item">
-                    <a class="nav-link" href="admin.php">My Page</a>
-                </li>
+                <?php
+                    if($_SESSION["user_id"]){
+                         echo '               <li class="nav-item">
+                         <a class="nav-link" href="admin.php">My Page</a>
+                     </li>';
+                    }
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Help</a>
                 </li>
