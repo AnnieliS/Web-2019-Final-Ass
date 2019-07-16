@@ -15,9 +15,7 @@ main, nav, article, aside, section, header, footer {
 }
 
 main {
-    width: 86.11111111111111%;
-    margin-left: 6.944444444444445%;
-    margin-right: 6.944444444444445%;
+    width: 100vw;
     height: 100%;
 }
 
@@ -84,7 +82,6 @@ main {
         color: #d6d6d6;
         position: relative;
     }
-
     /*-----Index Page-----*/
     #siteSlogan {
         background-image: url("../images/Slogan.png");
@@ -240,10 +237,9 @@ main {
         width: 75%;
     }
     /*-----ADMIN PAGE-----*/
-    #uTable, #vadTable{
+    #uTable, #vadTable {
         color: #fff;
     }
-
     #sideNavi .nav-pills {
         position: absolute;
         top: 30%;
@@ -254,10 +250,10 @@ main {
         margin-top: 5%;
     }
     .nav-pills .nav-link.active {
-        background-color: #6c757d !important;
+        background-color: #6c757d;
     }
     #sideNavi a {
-        color: #fff !important;
+        color: #fff;
     }
     /*Dashboard*/
     .box {
@@ -322,9 +318,8 @@ main {
         font-size: 20px;
         margin-right: 15px;
     }
-
     /*Delete User Button*/
-    #delUserButt{
+    #delUserButt {
         display: block;
         height: 50px;
         width: 400px;
@@ -333,13 +328,10 @@ main {
         text-align: center;
         text-shadow: 2px 2px #ff0000;
         font-size: 200%;
-
     }
-
-    #delUserButt{
+    #delUserButt {
         cursor: pointer;
     }
-
     /*-----FOOTER-----*/
     footer {
         height: 40px;
@@ -359,17 +351,13 @@ main {
 
 /*Font Colours*/
 
-#uploadVir{
+#uploadVir {
     margin: 0px auto;
 }
 
-#uploadVir label{
+#uploadVir label {
     color: #fff;
 }
-
-
-
-
 
 /*Dragon Drop*/
 
@@ -451,7 +439,7 @@ main {
     font-size: 75%;
 }
 
-#uploadVir .packDesc p{
+#uploadVir .packDesc p {
     padding-top: 3%;
     padding-left: 5%;
 }
@@ -463,69 +451,66 @@ main {
     margin-bottom: 4%;
 }
 
-.progress{
+.progress {
     margin-bottom: 5%;
     margin-top: 5%;
 }
 
-#uploadVir #stepone-done{
-    float: right;
-    position: relative;
-    left: 70vw;
-}
-#uploadVir button{
+#uploadVir #stepone-done {
     float: right;
     position: relative;
     left: 70vw;
 }
 
-#uploadVir .stepone{
+#uploadVir button {
+    float: right;
+    position: relative;
+    left: 70vw;
+}
+
+#uploadVir .stepone {
     padding-top: 8%;
 }
 
-#uploadVir .center-radio{
+#uploadVir .center-radio {
     margin-left: 48%;
 }
 
-#uploadVir .range{
+#uploadVir .range {
     margin-top: 15vh;
 }
 
-.hide{
-    display: hidden;
+.hide {
+    display: none;
 }
 
-#stepTwo{
+#stepTwo {
     margin-top: 12vh;
 }
 
-
 /*-----My Page-----*/
 
-#myPage tbody{
+#myPage tbody {
     color: #fff;
 }
 
-.lbButt{
+.lbButt {
     height: 100%;
     width: 70%;
     border-radius: 4px;
     color: #fff;
     background-color: #4d4d4d;
     text-align: center;
-
 }
 
-.lbrow{
+.lbrow {
     margin-top: 5%;
 }
 
-.insideLightbox2{
+.insideLightbox2 {
     height: 100%;
     width: 100%;
-
 }
-
 
 /*-----MOBILE-----*/
 
@@ -541,8 +526,10 @@ main {
     #logo {
         background-image: url('../images/Mobile_Header.png');
         background-repeat: no-repeat;
-        width: 100%;
-        height: 202px;
+        display: flex;
+        display: block;
+        background-size: cover;
+        min-height: 150px;
         background-color: #000;
     }
     .popObj {
@@ -635,6 +622,9 @@ main {
     #buynow .submit_buttons {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        max-width: 100vw;
+        font-size: 50%;
     }
     #buynow .submit_buttons button {
         margin: 1vw;
@@ -642,9 +632,14 @@ main {
     #buynow2 .submit_buttons {
         display: flex;
         justify-content: flex-end;
+        max-width: 100vw;
     }
     #buynow2 .submit_buttons button {
         flex-basis: 33%;
+        margin-left: 2%;
+    }
+    #buynow2 #disabledtextbox {
+        border-radius: 12px;
     }
     .con {
         display: flex;
@@ -683,4 +678,178 @@ main {
         float: none;
         display: block;
     }
+    .modal-body {
+        display: flex;
+    }
+    .lightFlex {
+        max-width: 100vw;
+        flex-direction: column;
+    }
+    .files input {
+        outline: 2px dashed #92b0b3;
+        outline-offset: -10px;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        padding: 120px 0px 85px 35%;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+    }
+    .files input:focus {
+        outline: 2px dashed #92b0b3;
+        outline-offset: -10px;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        border: 1px solid #92b0b3;
+    }
+    .files {
+        position: relative
+    }
+    .files:after {
+        pointer-events: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 50px;
+        right: 0;
+        height: 56px;
+        content: "";
+        background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+        display: block;
+        margin: 0 auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .hide {
+        display: none;
+    }
+    #sideNavi .row {
+        display: flex;
+        flex-direction: column;
+    }
+    #sideNavi .row {
+        margin: 0px auto;
+    }
+    #sideNavi .row .table {
+        min-width: 100%;
+    }
+    #sideNavi .row div.col-9 {
+        min-width: 100vw;
+    }
+    .nav-pills .nav-link.active {
+        background-color: #6c757d;
+    }
+    #sideNavi a {
+        color: #fff;
+    }
+    #Message i {
+        float: left;
+    }
+    /* Style the container with a rounded border, grey background and some padding and margin */
+    #Message .container {
+        border: 2px solid #ccc;
+        background-color: #eee;
+        border-radius: 5px;
+        padding: 16px;
+        margin: 16px 0;
+    }
+    /* Clear floats after containers */
+    #Message .container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+    #Message .container img {
+        float: left;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+    /* Increase the font-size of a span element */
+    #Message .container span {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+
+    #uTable, #vadTable {
+        color: #fff;
+    }
+    #sideNavi .row {
+        display: flex;
+        flex-direction: column;
+    }
+    #sideNavi .row {
+        margin: 0px auto;
+    }
+    #sideNavi .row .table {
+        min-width: 100%;
+    }
+    #sideNavi .row .col-9 {
+        min-width: 100vw;
+    }
+    .nav-pills .nav-link.active {
+        background-color: #6c757d;
+    }
+    #sideNavi a {
+        color: #fff;
+    }
+    /*Dashboard*/
+    .box {
+        width: 90vw;
+        height: 10vh;
+        margin-bottom: 10%;
+        border-radius: 49px;
+        background-color: #eee;
+    }
+    .box i {
+        float: left;
+        margin-left: 7%;
+        margin-top: 2%;
+        color: #606060;
+    }
+    .box h2 {
+        float: left;
+        margin-left: 5%;
+        margin-top: 4%;
+        font-size: 100%;
+        color: #000;
+    }
+    /*Video Responsivity*/
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        margin-bottom: 56.25%;
+        height: 0;
+    }
+    .iframe-container iframe {
+        position: absolute;
+        top: 56.25%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .e2Mobile{
+        display: none;
+    }
+
+
+
+    #admin #sideNavi .row .col-9{
+        max-width: 95vw;
+        min-width: 50vw;
+    }
+
+    /*Delete User Button*/
+    #delUserButt {
+        display: block;
+        height: 50px;
+        max-width: 90vw;
+        border-radius: 12px;
+        background-color: #aa0606;
+        text-align: center;
+        text-shadow: 2px 2px #ff0000;
+        font-size: 150%;
+
+    }
+
 }

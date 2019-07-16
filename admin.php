@@ -33,7 +33,7 @@ include 'URLset.php';
 
         <!-- Main -->
 
-        <main>
+        <main id="admin">
 
             <!-- Breadcrumbs -->
 

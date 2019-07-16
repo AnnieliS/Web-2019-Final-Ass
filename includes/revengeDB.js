@@ -12,6 +12,7 @@ var clickBox = document.getElementById('showMore');
 
         for(var i = 0;i<lastVar;i++){
             var virus = document.createElement('button');
+            virus.classList.add('virusInDB');
             $(virus).attr({"data-toggle":"modal", "data-target":"#exampleModal", "data-whatever":obj[i].vir_id});
 
             var virImg = document.createElement('img');

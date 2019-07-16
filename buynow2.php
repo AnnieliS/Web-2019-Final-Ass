@@ -63,7 +63,7 @@ session_start();
                 <div class='form-group row'>
                         <label for='textbox' class='col-sm-2 col-form-label'>More Info</label>
                         <div class='col-sm-7'>
-                                <textarea rows='5' cols='85' name='info' id='disabledtextbox' form='victim_info' placeholder='Any info you want to use against the victim'>" . $info . "</textarea>
+                                <textarea rows='5' name='info' id='disabledtextbox' class='col-sm-7' form='victim_info' placeholder='Any info you want to use against the victim'>" . $info . "</textarea>
                         </div>
                     </div>
                     <div class='col-auto my-1'>

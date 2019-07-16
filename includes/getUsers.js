@@ -27,6 +27,7 @@ $(window).on("load", function () {
             var uName = document.createElement('td');
 
             var uEmail = document.createElement('td');
+            uEmail.classList.add('e2Mobile');
             uEmail.innerHTML = obj[i].email;
 
             $(uA).attr({ "href": 'http://localhost/~annielisiegel/Final%20Ass%202.0/Web-2019-Final-Ass/adMyPage.php?userID=' + uId.innerHTML});
