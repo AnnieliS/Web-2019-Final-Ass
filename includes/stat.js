@@ -3,7 +3,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     var virusId = button.data('whatever')
     var Title = $('VirTitle');
     var insideLightbox = document.getElementById('virusUserSingle');
-    $.getJSON('data/virus.json', function (data) {
+    $.getJSON('./data/virus.json', function (data) {
 
         $.each(data.virus, function (i, obj) {
             if (obj.vId == virusId) {
