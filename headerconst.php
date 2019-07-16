@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <div id="fixedHead">
 
     <header>
@@ -68,8 +72,24 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Cart</a>
                 </li>
+                <?php
+                    if($_SESSION["is_admin"]==1)
+                    {
+                        echo '                <li class="nav-item">
+                        <a class="nav-link active" href="admin.php">Admin</a>
+                    </li>';
+                    }
+                ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <?php
+                    if($_SESSION["user_id"]){
+                        echo '<a class="nav-link" href="logout.php">Logout</a>';
+                    }
+                    else {
+                        echo '<a class="nav-link" href="login.php">Login</a>';
+                    }
+                    ?>
+                    
                 </li>
             </ul>
         </div>
