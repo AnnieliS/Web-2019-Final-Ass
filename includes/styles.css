@@ -325,13 +325,20 @@ main {
 
     /*Delete User Button*/
     #delUserButt{
+        display: block;
         height: 50px;
-        width: 150px;
-        background-color: #6c757d;
-        color: #232323;
+        width: 400px;
+        border-radius: 12px;
+        background-color: #aa0606;
         text-align: center;
+        text-shadow: 2px 2px #ff0000;
+        font-size: 200%;
+
     }
 
+    #delUserButt{
+        cursor: pointer;
+    }
 
     /*-----FOOTER-----*/
     footer {
