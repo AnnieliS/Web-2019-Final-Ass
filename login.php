@@ -17,7 +17,7 @@
 
 
        if(is_array($row)){
-           $_SESSION["currUser_id"]= $row['user_id'];
+           $_SESSION["user_id"]= $row['user_id'];
            $_SESSION["is_admin"]= $row['is_admin'];
            header('Location: ' . URL . 'index.php');
        }

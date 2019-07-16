@@ -52,62 +52,54 @@ include 'URLset.php';
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+
+                <!-- Guest options -->
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="RevengePage.php">Browse</a>
                 </li>
+
+                <!-- Check SESSION for user login -->
+
                 <?php
-                    if($_SESSION["user_id"]){
-                         echo '                <li class="nav-item">
+                if ($_SESSION["user_id"] || $_SESSION["is_admin"]==1) {
+                    echo '                <li class="nav-item">
                          <a class="nav-link" href="uploadVir.php">Upload</a>
-                     </li>';
-                    }
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link" href="g_myPage.php">My Page</a>
+                 </li>';
+                }
                 ?>
 
-                <?php
-                    if($_SESSION["user_id"]){
-                         echo '                <li class="nav-item">
-                         <a class="nav-link" href="#">Sell</a>
-                     </li>';
-                    }
-                ?>
+                <!--Check SESSION for admin user-->
+
+
 
                 <?php
-                    if($_SESSION["user_id"]){
-                         echo '               <li class="nav-item">
-                         <a class="nav-link" href="admin.php">My Page</a>
-                     </li>';
-                    }
+                if ($_SESSION["is_admin"] == 1) {
+                    echo '<li class="nav-item">
+                        <a class="nav-link" href="admin.php">Admin</a>
+                        </li>';
+                }
                 ?>
+
+
                 <li class="nav-item">
-                    <a class="nav-link" href="g_myPage.php">Help</a>
+                    <a class="nav-link" href="#">Cart</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Cart</a>
-                </li>
-                <?php
-                    if($_SESSION["is_admin"]==1)
-                    {
-                        echo '                <li class="nav-item">
-                        <a class="nav-link active" href="admin.php">Admin</a>
-                    </li>';
-                    }
-                ?>
-                <li class="nav-item">
 
+                <!-- Check if User is logged in -->
+                <li class="nav-item">
                     <?php
-                    if($_SESSION["user_id"]){
+                    if ($_SESSION["user_id"] || $_SESSION["is_admin"]==1) {
                         echo '<a class="nav-link" href="logout.php">Logout</a>';
-                    }
-                    else {
+                    } else {
                         echo '<a class="nav-link" href="login.php">Login</a>';
                     }
                     ?>
-
-
-                    <a class="nav-link" href="login.php">Login</a>
 
                 </li>
             </ul>
