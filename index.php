@@ -17,13 +17,12 @@
 
 <body>
 
-    <div id="wrapper">
-
-
         <!--Header + Nav -->
 
-        <?php include 'headerconst.php' ?>
 
+<?php include 'headerconst.php' ?>
+
+    <div id="wrapper">
 
         <!--Slogan-->
 
@@ -31,7 +30,6 @@
         <main>
 
             <!--Content-->
-            <div></div>
 
 
             <div class="popType">
