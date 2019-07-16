@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+
+$_SESSION["name"] = null;
+$_SESSION["email"] = null;
+$_SESSION["info"] = null;
+$_SESSION["dis"] = null;
+
 ?>
 
 
@@ -43,7 +50,7 @@ session_start();
 
 
 
- 
+
 
             </div>
             <div class="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -56,7 +63,7 @@ session_start();
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p></p>
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

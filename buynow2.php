@@ -2,7 +2,6 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 
 <html>
@@ -38,12 +37,12 @@ session_start();
         <h1 id="pageH1">Victims info</h1>
         <div class="con">
             <?php
-            $name = $_GET["fullname"];
-            $email = $_GET["email"];
-            $info = $_GET["info"];
-            $checked = $_GET["dis"];
+            $_SESSION["name"] = $_GET["fullname"];
+            $_SESSION["email"] = $_GET["email"];
+            $_SESSION["info"] = $_GET["info"];
+            $_SESSION["dis"] = $_GET["dis"];
             $ck;
-            if ($checked == "on")
+            if ($_SESSION["dis"] == "on")
                 $ck = "checked";
             else $ck = "unchecked";
             echo "<form id='victim_info'>
@@ -51,19 +50,19 @@ session_start();
                 <div class='form-group row'>
                     <label for='inputfullname' class='col-sm-2 col-form-label'>Full name</label>
                     <div class='col-sm-7'>
-                        <input type='text' class='form-control' id='disabledinputfullnamedisabled' placeholder='Full name' value=' " . $name . " '>
+                        <input type='text' class='form-control' id='disabledinputfullnamedisabled' placeholder='Full name' value=' " . $_SESSION["name"] . " '>
                     </div>
                 </div>
                 <div class='form-group row'>
                     <label for='inputEmail3' class='col-sm-2 col-form-label'>Email</label>
                     <div class='col-sm-7'>
-                        <input type='email' class='form-control' id='disabledinputEmail3disabled' placeholder='Email' value=' " . $email . " '>
+                        <input type='email' class='form-control' id='disabledinputEmail3disabled' placeholder='Email' value=' " . $_SESSION["email"] . " '>
                     </div>
                 </div>
                 <div class='form-group row'>
                         <label for='textbox' class='col-sm-2 col-form-label'>More Info</label>
                         <div class='col-sm-7'>
-                                <textarea rows='5' name='info' id='disabledtextbox' class='col-sm-7' form='victim_info' placeholder='Any info you want to use against the victim'>" . $info . "</textarea>
+
                         </div>
                     </div>
                     <div class='col-auto my-1'>

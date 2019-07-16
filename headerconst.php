@@ -79,11 +79,13 @@ include 'URLset.php';
 
 
                 <?php
+
                 if ($_SESSION["is_admin"] == 1) {
                     echo '<li class="nav-item">
                         <a class="nav-link" href="admin.php">Admin</a>
                         </li>';
                 }
+
                 ?>
 
 
@@ -99,9 +101,18 @@ include 'URLset.php';
                     } else {
                         echo '<a class="nav-link" href="login.php">Login</a>';
                     }
+
                     ?>
 
                 </li>
+                <?php
+                    if($_SESSION["user_name"])
+                    {
+                        echo '                <li class="nav-item">
+                        <a class="nav-link active" href="admin.php">'.$_SESSION["user_name"].'</a>
+                    </li>';
+                    }
+                ?>
             </ul>
         </div>
     </nav>

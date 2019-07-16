@@ -19,6 +19,7 @@
        if(is_array($row)){
            $_SESSION["user_id"]= $row['user_id'];
            $_SESSION["is_admin"]= $row['is_admin'];
+           $_SESSION["user_name"] = $row["username"];
            header('Location: ' . URL . 'index.php');
        }
        else {

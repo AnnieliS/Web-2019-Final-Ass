@@ -118,7 +118,10 @@ generateVirus = function () {
     lastVar=lastVar+3;
 })};
 
+
+
 $('#exampleModal').on('show.bs.modal', function (event) {
+    $('.modal-body').html('<div class="d-flex justify-content-center"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div></div>');
     var button = $(event.relatedTarget)
     var upName = $(button).children(".virUploader").html();
     var recipient = button.data('whatever')
